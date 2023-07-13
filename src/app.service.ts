@@ -42,8 +42,6 @@ export class AppService {
         })
       );
 
-      // TODO : guardar url publica de archivo subido y metadata del mismo en Mongo
-
       return new ResponseCreator(
         new UploadFileResponseDto(uploadFileData.fileName),
         HttpStatus.CREATED,

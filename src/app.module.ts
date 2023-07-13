@@ -7,9 +7,12 @@ import { fileProvider } from './file/file.provider';
 
 
 @Module({
-  imports: [DatabaseModule, ConfigModule.forRoot({
-    isGlobal: true,
-  }),],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    DatabaseModule
+  ],
   controllers: [AppController],
   providers: [AppService, fileProvider],
 })
